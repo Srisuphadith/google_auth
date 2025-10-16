@@ -13,7 +13,8 @@
     "@elysiajs/jwt": "^1.4.0",
     "arctic": "^3.7.0",
     "elysia": "latest",
-    "elysia-oauth2": "^2.1.0"
+    "elysia-oauth2": "^2.1.0",
+    "tsdown": "^0.15.7"
   },
   "devDependencies": {
     "bun-types": "latest"
