@@ -3,7 +3,7 @@ import { oauth2 } from "elysia-oauth2";
 import { cookie } from "@elysiajs/cookie"
 import { cors } from "@elysiajs/cors"
 import {jwt} from "@elysiajs/jwt"
-new Elysia()
+export default new Elysia()
   .use(cookie())
   .use(jwt({
     name:'jwt',
