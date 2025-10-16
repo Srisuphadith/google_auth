@@ -4,7 +4,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
-    "build": "tsdown src/index.ts -d src --dts"
+    "build": "tsdown src/index.ts -d api --dts"
   },
   "dependencies": {
     "@elysiajs/cookie": "^0.8.0",
@@ -13,8 +13,7 @@
     "@elysiajs/jwt": "^1.4.0",
     "arctic": "^3.7.0",
     "elysia": "latest",
-    "elysia-oauth2": "^2.1.0",
-    "tsdown": "^0.15.7"
+    "elysia-oauth2": "^2.1.0"
   },
   "devDependencies": {
     "bun-types": "latest"
