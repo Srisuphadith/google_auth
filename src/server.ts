@@ -28,7 +28,10 @@ new Elysia()
     })
   )
   //google login
-  .get("/", async ({ oauth2, redirect }) => {
+  .get("/", async ({ oauth2, cookie,redirect }) => {
+    if(cookie.user.value){
+     return redirect ("http://localhost:3000/profile")
+    }
     const url = oauth2.createURL("Google", ["openid", "email", "profile"]);
     url.searchParams.set("access_type", "offline");
     url.searchParams.set("prompt", "select_account consent");
@@ -71,10 +74,10 @@ new Elysia()
     }
   })
   //view profile
-  .get('/profile', ({ cookie }) => {
+  .get('/profile', ({ cookie ,redirect}) => {
     const name = cookie.user.value
     if (!name) {
-      return ({ error: "cookie unset" })
+      return redirect("http://localhost:3000/")
     }
     return (name)
   })
